@@ -66,8 +66,8 @@ export default function Page() {
 
     <section id="experience" className="border-y border-border bg-white"><div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-[.85fr_1.15fr] lg:items-center lg:px-8 lg:py-24"><div><p className="eyebrow">Our experience. Our capability.</p><h2 className="section-title">Built on <span>25+ years</span> of experience.</h2><p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground">Since 2000, Venus Plastic Enterprises has been manufacturing dependable PVC products and protective solutions for businesses across India.</p><div className="mt-8 flex items-center gap-3 text-sm font-bold text-navy"><span className="h-px w-10 bg-accent" />Made in Bhiwandi, Maharashtra</div></div><div><div className="grid grid-cols-2 border-l border-t border-border">{[['25+', 'Years of Experience', 'A quarter-century of dependable manufacturing.'], ['40+', 'Skilled Professionals', 'A dedicated team behind every requirement.'], ['2000', 'Established', 'Building trust since the new millennium.'], ['Pan India', 'Supply Network', 'Serving businesses across India.']].map(([value, label, text]) => <div key={label} className="border-b border-r border-border p-5 sm:p-7"><p className="text-3xl font-black tracking-tight text-primary sm:text-4xl">{value}</p><p className="mt-2 font-bold text-navy">{label}</p><p className="mt-2 text-sm leading-6 text-muted-foreground">{text}</p></div>)}</div></div></div></section>
 
-    <section id="about" className="bg-white px-5 py-16 lg:px-8 lg:py-20">
-      <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_300px] items-center gap-8">
+    <section id="about" className="bg-white px-5 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-12">
 
         {/* LEFT */}
         <div className="min-w-0">
@@ -77,12 +77,11 @@ export default function Page() {
 
           <h2 className="mt-4 max-w-[620px] text-4xl font-black leading-[1.04] tracking-[-0.035em] text-navy sm:text-5xl">
             A manufacturing
-            <br />
-            partner{" "}
-            <span className="text-primary">
-              you can rely
-            </span>
-            <br />
+            <br className="hidden sm:block" />
+            {" "}partner{" "}
+            <span className="text-primary">you can rely</span>
+            <br className="hidden sm:block" />
+            {" "}
             <span className="text-primary">on.</span>
           </h2>
 
@@ -103,7 +102,7 @@ export default function Page() {
           </div>
 
           {/* ADDRESS */}
-          <div className="mt-7 max-w-[605px] rounded-xl border-l-4 border-primary bg-surface px-5 py-4">
+          <div className="mt-7 max-w-[605px] rounded-xl border-l-4 border-primary bg-surface px-4 py-4 sm:px-5">
             <p className="text-[13px] font-bold leading-5 text-navy">
               Jaimatadi Compound, Gala P/210, Kalher, Bhiwandi, Dist. Thane -
               421 302, Maharashtra, India.
@@ -112,10 +111,10 @@ export default function Page() {
         </div>
 
         {/* RIGHT */}
-        <div className="w-[300px] justify-self-end">
+        <div className="w-full lg:w-[300px] lg:justify-self-end">
           <div className="overflow-hidden rounded-2xl bg-navy shadow-xl shadow-navy/10">
 
-            <div className="h-[225px] overflow-hidden bg-slate-100">
+            <div className="h-[220px] overflow-hidden bg-slate-100 sm:h-[260px] lg:h-[225px]">
               <img
                 src={assets.bag}
                 alt="Clear custom PVC packaging bag"
@@ -123,7 +122,7 @@ export default function Page() {
               />
             </div>
 
-            <div className="px-5 py-5 text-white">
+            <div className="px-5 py-5 text-white sm:px-6 sm:py-6 lg:px-5 lg:py-5">
               <p className="text-3xl font-black leading-none text-accent">
                 25+
               </p>
@@ -144,7 +143,6 @@ export default function Page() {
     </section>
 
 
-
     <section id="products" className="bg-surface px-5 py-20 lg:px-8 lg:py-28"><div className="mx-auto max-w-7xl"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p className="eyebrow">Our product range</p><h2 className="section-title">Protection for <span>every requirement.</span></h2></div><p className="max-w-md leading-7 text-muted-foreground">Choose a proven product or tell us what needs to be made. We manufacture for fit, function and presentation.</p></div><div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{products.map(([title, text, image]) => <article key={title} className="group overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"><div className="h-44 overflow-hidden bg-slate-50"><img src={image} alt={title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" /></div><div className="p-5"><h3 className="text-lg font-extrabold text-navy">{title}</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">{text}</p><a href="#contact" className="mt-4 inline-block text-sm font-bold text-primary">Get Quote →</a></div></article>)}</div></div></section>
 
 
@@ -154,8 +152,9 @@ export default function Page() {
     <section id="industries" className="bg-surface px-5 py-20 lg:px-8 lg:py-28"><div className="mx-auto max-w-7xl"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p className="eyebrow">Industries we serve</p><h2 className="section-title">Reliable solutions for <span>every sector.</span></h2></div><p className="max-w-md leading-7 text-muted-foreground">Reliable PVC and protective solutions for businesses across multiple industries.</p></div><div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{[['01', 'Automotive & Two-Wheeler', 'Seat covers, handle covers, handle muffs and protective products for automotive businesses.', CarFront], ['02', 'Garment & Apparel', 'PVC suit covers, garment protection and packaging solutions for apparel manufacturers.', Shirt], ['03', 'Textile Businesses', 'Protective and packaging solutions designed for textile products and brands.', Box], ['04', 'Retail & Wholesale', 'Ready-to-supply products and customized packaging solutions for retailers and wholesalers.', ShoppingBag], ['05', 'Industrial Packaging', 'Durable PVC packaging and protective covers for industrial applications.', Factory], ['06', 'Brand & Custom Packaging', 'Custom sizes, designs, colors and logo printing for businesses building their own product packaging.', Sparkles]].map(([number, title, text, Icon]) => <article key={title as string} className="group relative border border-border bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-xl hover:shadow-navy/5 sm:p-7"><div className="flex items-start justify-between"><span className="font-mono text-xs font-bold tracking-[.2em] text-primary">{number}</span><Icon size={23} strokeWidth={1.5} className="text-navy transition group-hover:text-primary" /></div><h3 className="mt-12 text-xl font-extrabold text-navy">{title as string}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{text as string}</p><div className="mt-6 flex items-center gap-2 text-sm font-bold text-primary opacity-0 transition group-hover:opacity-100">Explore capability <ArrowUpRight size={16} /></div></article>)}</div></div></section>
 
 
-    <section id="contact" className="bg-white px-5 py-20 lg:px-8 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.82fr_1.18fr]"><div><p className="eyebrow">Contact Venus</p><h2 className="section-title">Let&apos;s discuss your <span>next requirement.</span></h2><p className="mt-6 leading-7 text-muted-foreground">Share your product, quantity and customization needs. We are structured to respond to B2B enquiries clearly and promptly.</p><div className="mt-10 space-y-5 text-sm"><div><p className="font-bold text-navy">Phone</p><p className="mt-1 text-muted-foreground">+91 9867365662</p></div><div><p className="font-bold text-navy">Email</p><p className="mt-1 text-muted-foreground">venuspvc17@gmail.com
-    </p></div><div><p className="font-bold text-navy">Full Address</p><p className="mt-1 max-w-sm leading-6 text-muted-foreground">Jaimatadi Compound, Gala P/210, Kalher, Bhiwandi, Dist. Thane - 421 302, Maharashtra, India.</p></div><a href="https://maps.google.com/?q=Kalher+Bhiwandi+Maharashtra" target="_blank" rel="noreferrer" className="inline-block font-bold text-primary">Open Google Maps →</a></div></div><form className="rounded-2xl border border-border bg-surface p-6 shadow-xl shadow-navy/5 sm:p-8" onSubmit={(event) => event.preventDefault()}><div className="grid gap-5 sm:grid-cols-2"><label className="field"><span>Name</span><input required placeholder="Your name" /></label><label className="field"><span>Company</span><input placeholder="Company name" /></label><label className="field"><span>Email</span><input required type="email" placeholder="you@company.com" /></label><label className="field"><span>Phone / WhatsApp</span><input placeholder="Your number" /></label><label className="field sm:col-span-2"><span>Product or service</span><select defaultValue=""><option value="" disabled>Select a product</option>{products.map(([title]) => <option key={title}>{title}</option>)}<option>Custom requirement</option></select></label><label className="field sm:col-span-2"><span>Requirement details</span><textarea rows={5} placeholder="Quantity, size, material, printing or delivery details" /></label></div><button type="submit" className="mt-6 w-full rounded-full bg-primary px-5 py-3.5 font-bold text-white transition hover:bg-navy">Send Enquiry</button><p className="mt-3 text-center text-xs text-muted-foreground">We will review your enquiry and get back to you.</p></form></div></section>
+    <section id="contact" className="bg-white px-5 py-20 lg:px-8 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.82fr_1.18fr]"><div><p className="eyebrow">Contact Venus</p><h2 className="section-title">Let&apos;s discuss your <span>next requirement.</span></h2><p className="mt-6 leading-7 text-muted-foreground">Share your product, quantity and customization needs. We are structured to respond to B2B enquiries clearly and promptly.</p><div className="mt-10 space-y-5 text-sm"><div><p className="font-bold text-navy">Phone</p><p className="mt-1 text-muted-foreground">+91 7718909901</p></div><div><p className="font-bold text-navy">Phone</p><p className="mt-1 text-muted-foreground">+91 9867365662</p></div>
+      <div><p className="font-bold text-navy">Email</p><p className="mt-1 text-muted-foreground">venuspvc17@gmail.com
+      </p></div><div><p className="font-bold text-navy">Full Address</p><p className="mt-1 max-w-sm leading-6 text-muted-foreground">Jaimatadi Compound, Gala P/210, Kalher, Bhiwandi, Dist. Thane - 421 302, Maharashtra, India.</p></div><a href="https://maps.google.com/?q=Kalher+Bhiwandi+Maharashtra" target="_blank" rel="noreferrer" className="inline-block font-bold text-primary">Open Google Maps →</a></div></div><form className="rounded-2xl border border-border bg-surface p-6 shadow-xl shadow-navy/5 sm:p-8" onSubmit={(event) => event.preventDefault()}><div className="grid gap-5 sm:grid-cols-2"><label className="field"><span>Name</span><input required placeholder="Your name" /></label><label className="field"><span>Company</span><input placeholder="Company name" /></label><label className="field"><span>Email</span><input required type="email" placeholder="you@company.com" /></label><label className="field"><span>Phone / WhatsApp</span><input placeholder="Your number" /></label><label className="field sm:col-span-2"><span>Product or service</span><select defaultValue=""><option value="" disabled>Select a product</option>{products.map(([title]) => <option key={title}>{title}</option>)}<option>Custom requirement</option></select></label><label className="field sm:col-span-2"><span>Requirement details</span><textarea rows={5} placeholder="Quantity, size, material, printing or delivery details" /></label></div><button type="submit" className="mt-6 w-full rounded-full bg-primary px-5 py-3.5 font-bold text-white transition hover:bg-navy">Send Enquiry</button><p className="mt-3 text-center text-xs text-muted-foreground">We will review your enquiry and get back to you.</p></form></div></section>
 
     <footer className="border-t border-border bg-navy px-5 py-10 text-white lg:px-8"><div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 sm:flex-row sm:items-end"><div><img src={assets.logo} alt="VENUS logo" className="h-10 w-24 object-contain" /><p className="mt-3 max-w-sm text-sm leading-6 text-white/65">Venus Plastic Enterprises — an established PVC products manufacturer in Bhiwandi, Maharashtra.</p></div><div className="flex gap-6 text-sm font-bold text-white/75"><a href="#about" className="hover:text-accent">About</a><a href="#products" className="hover:text-accent">Products</a><a href="#contact" className="hover:text-accent">Contact</a></div></div><div className="mx-auto mt-8 max-w-7xl border-t border-white/15 pt-5 text-xs text-white/50">© {new Date().getFullYear()} Venus Plastic Enterprises. All rights reserved.</div></footer>
 
