@@ -142,6 +142,7 @@ export default function Page() {
 
       </div>
     </section>
+    
 
 
     <section id="products" className="bg-surface px-5 py-20 lg:px-8 lg:py-28"><div className="mx-auto max-w-7xl"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p className="eyebrow">Our product range</p><h2 className="section-title">Protection for <span>every requirement.</span></h2></div><p className="max-w-md leading-7 text-muted-foreground">Choose a proven product or tell us what needs to be made. We manufacture for fit, function and presentation.</p></div><div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{products.map(([title, text, image]) => <article key={title} className="group overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"><div className="h-44 overflow-hidden bg-slate-50"><img src={image} alt={title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" /></div><div className="p-5"><h3 className="text-lg font-extrabold text-navy">{title}</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">{text}</p><a href="#contact" className="mt-4 inline-block text-sm font-bold text-primary">Get Quote →</a></div></article>)}</div></div></section>
